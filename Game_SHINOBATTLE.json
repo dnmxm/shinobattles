@@ -8,8 +8,8 @@
     ],
     "decksUrl": ""
   },
-  "customHelp": "",
-  "cardRotation": 45,
+  "customHelp": "I'm the custom help message",
+  "cardRotation": "0",
   "cards": {
     "dataUrl": "https://dnmxm.github.io/naruto-mythos-tcg/CardList.json",
     "cardBack": "https://dnmxm.github.io/naruto-mythos-tcg/img/Naruto_TCG_Card_Back-0dcade80-1920w.png"
@@ -20,12 +20,18 @@
       "keyword",
       "group"
     ],
-    "formats": []
+    "formats": [
+      {
+        "title": "Standard",
+        "gameplay": "Standard",
+        "customCategories": []
+      }
+    ]
   },
   "gameplay": {
-    "Classic": {
+    "Standard": {
       "mulligan": {
-        "info": "",
+        "info": "Mulligan description",
         "startingHandSize": "5",
         "drawNewHand": true,
         "putSelectionAtBottom": false,
@@ -37,7 +43,7 @@
         "firstPlayerTokenName": "",
         "drawPerTurn": "2"
       },
-      "defaultNotes": "",
+      "defaultNotes": "default notes",
       "tokens": [],
       "countersStartingValues": [
         "1"
@@ -100,7 +106,9 @@
             }
           ]
         },
-        "categoriesAlreadyOnBoard": [],
+        "categoriesAlreadyOnBoard": [
+          "Missions"
+        ],
         "autoPlayFromHand": {},
         "autoPlayFromStack": {},
         "sectionsDict": {
