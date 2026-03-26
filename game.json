@@ -1,22 +1,24 @@
 {
-  "name": "SHINOBATTLE",
-  "menuBackgroundImage": "https://dnmxm.github.io/naruto-mythos-tcg/img/assets/background.jpeg",
+  "name": "SHINOBATTLES",
+  "menuBackgroundImage": "https://dnmxm.github.io/shinobattles/img/assets/background.jpeg",
   "defaultRessources": {
     "backgrounds": [
-      "https://dnmxm.github.io/naruto-mythos-tcg/img/assets/playmat1.jpeg",
-      "https://dnmxm.github.io/naruto-mythos-tcg/img/assets/playmat2.jpeg"
+      "https://dnmxm.github.io/shinobattles/img/assets/playmat1.jpeg",
+      "https://dnmxm.github.io/shinobattles/img/assets/playmat2.jpeg"
     ],
     "decksUrl": ""
   },
-  "customHelp": "I'm the custom help message",
+  "customHelp": "",
   "cardRotation": "0",
   "cards": {
-    "dataUrl": "https://dnmxm.github.io/naruto-mythos-tcg/CardList.json",
-    "cardBack": "https://dnmxm.github.io/naruto-mythos-tcg/img/Naruto_TCG_Card_Back-0dcade80-1920w.png"
+    "dataUrl": "https://dnmxm.github.io/shinobattles/cards.json",
+    "cardBack": "https://dnmxm.github.io/shinobattles/img/Naruto_TCG_Card_Back-0dcade80-1920w.png"
   },
   "deckBuilding": {
     "mainFilters": [
       "rarity",
+      "cost",
+      "power",
       "keyword",
       "group"
     ],
@@ -40,11 +42,18 @@
       "newTurn": {
         "drawOnStart": true,
         "sharedTurn": true,
-        "firstPlayerTokenName": "",
+        "firstPlayerTokenName": "Edge",
         "drawPerTurn": "2"
       },
-      "defaultNotes": "default notes",
-      "tokens": [],
+      "defaultNotes": "",
+      "tokens": [
+        {
+          "name": "Edge",
+          "image": "https://dnmxm.github.io/shinobattles/img/assets/naruto_token.png",
+          "isUnique": true,
+          "leavesAtEndOfTurn": false
+        }
+      ],
       "countersStartingValues": [
         "1"
       ],
@@ -54,72 +63,88 @@
           "Mission_D",
           "Mission_C",
           "Mission_B",
-          "Mission_A"
+          "Mission_A",
+          "Board_D",
+          "Board_C",
+          "Board_B",
+          "Board_A",
+          "Chakra"
         ],
         "layout": {
-          "direction": "row",
-          "isSymetricalForOpponents": false,
+          "direction": "column",
+          "isSymetricalForOpponents": true,
           "content": [
             {
-              "direction": "column",
+              "direction": "row",
               "style": false,
               "content": [
                 {
                   "section": "Mission_D",
                   "style": false
-                }
-              ],
-              "isSymetricalForOpponents": true
-            },
-            {
-              "direction": "column",
-              "style": false,
-              "content": [
+                },
                 {
                   "section": "Mission_C",
                   "style": false
-                }
-              ],
-              "isSymetricalForOpponents": true
-            },
-            {
-              "direction": "column",
-              "style": false,
-              "content": [
+                },
                 {
                   "section": "Mission_B",
                   "style": false
-                }
-              ],
-              "isSymetricalForOpponents": true
-            },
-            {
-              "direction": "column",
-              "style": false,
-              "content": [
+                },
                 {
                   "section": "Mission_A",
                   "style": false
                 }
               ],
-              "isSymetricalForOpponents": true
+              "isSymetricalForOpponents": false
+            },
+            {
+              "direction": "row",
+              "style": false,
+              "content": [
+                {
+                  "section": "Board_D",
+                  "style": false
+                },
+                {
+                  "section": "Board_C",
+                  "style": false
+                },
+                {
+                  "section": "Board_B",
+                  "style": false
+                },
+                {
+                  "section": "Board_A",
+                  "style": false
+                }
+              ],
+              "isSymetricalForOpponents": false
+            },
+            {
+              "direction": "row",
+              "style": false,
+              "content": [
+                {
+                  "section": "Chakra",
+                  "style": false
+                }
+              ],
+              "isSymetricalForOpponents": false
             }
           ]
         },
-        "categoriesAlreadyOnBoard": [
-          "Missions"
-        ],
+        "categoriesAlreadyOnBoard": [],
         "autoPlayFromHand": {},
         "autoPlayFromStack": {},
         "sectionsDict": {
           "Mission_D": {
             "title": "Mission_D",
-            "isHidden": "no",
-            "height": "MEDIUM",
+            "isHidden": "yes",
+            "height": "SMALL",
             "alignment": "CENTER",
             "opponentAlignment": false,
             "noAutoPayTo": false,
-            "isHorizontalAllowed": false,
+            "isHorizontalAllowed": true,
             "displayedTitle": "",
             "enterTapped": false,
             "enterSpun": false,
@@ -130,12 +155,12 @@
           },
           "Mission_C": {
             "title": "Mission_C",
-            "isHidden": "no",
-            "height": "MEDIUM",
+            "isHidden": "yes",
+            "height": "SMALL",
             "alignment": "CENTER",
             "opponentAlignment": false,
             "noAutoPayTo": false,
-            "isHorizontalAllowed": false,
+            "isHorizontalAllowed": true,
             "displayedTitle": "",
             "noQuickActions": false,
             "enterTapped": false,
@@ -146,6 +171,38 @@
           },
           "Mission_B": {
             "title": "Mission_B",
+            "isHidden": "yes",
+            "height": "SMALL",
+            "alignment": "CENTER",
+            "opponentAlignment": false,
+            "noAutoPayTo": false,
+            "isHorizontalAllowed": true,
+            "displayedTitle": "",
+            "noQuickActions": false,
+            "enterTapped": false,
+            "enterSpun": false,
+            "isGroupForbidden": false,
+            "keepTappedNewTurn": false,
+            "showHiddenCardInHistory": false
+          },
+          "Mission_A": {
+            "title": "Mission_A",
+            "isHidden": "yes",
+            "height": "SMALL",
+            "alignment": "CENTER",
+            "opponentAlignment": false,
+            "noAutoPayTo": false,
+            "isHorizontalAllowed": false,
+            "displayedTitle": "",
+            "noQuickActions": false,
+            "enterTapped": false,
+            "enterSpun": false,
+            "isGroupForbidden": false,
+            "keepTappedNewTurn": false,
+            "showHiddenCardInHistory": false
+          },
+          "Board_D": {
+            "title": "Board_D",
             "isHidden": "no",
             "height": "MEDIUM",
             "alignment": "CENTER",
@@ -160,14 +217,46 @@
             "keepTappedNewTurn": false,
             "showHiddenCardInHistory": false
           },
-          "Mission_A": {
-            "title": "Mission_A",
+          "Board_C": {
+            "title": "Board_C",
             "isHidden": "no",
             "height": "MEDIUM",
             "alignment": "CENTER",
             "opponentAlignment": false,
             "noAutoPayTo": false,
-            "isHorizontalAllowed": true,
+            "isHorizontalAllowed": false,
+            "displayedTitle": "",
+            "noQuickActions": false,
+            "enterTapped": false,
+            "enterSpun": false,
+            "isGroupForbidden": false,
+            "keepTappedNewTurn": false,
+            "showHiddenCardInHistory": false
+          },
+          "Board_B": {
+            "title": "Board_B",
+            "isHidden": "no",
+            "height": "MEDIUM",
+            "alignment": "CENTER",
+            "opponentAlignment": false,
+            "noAutoPayTo": false,
+            "isHorizontalAllowed": false,
+            "displayedTitle": "",
+            "noQuickActions": false,
+            "enterTapped": false,
+            "enterSpun": false,
+            "isGroupForbidden": false,
+            "keepTappedNewTurn": false,
+            "showHiddenCardInHistory": false
+          },
+          "Board_A": {
+            "title": "Board_A",
+            "isHidden": "no",
+            "height": "MEDIUM",
+            "alignment": "CENTER",
+            "opponentAlignment": false,
+            "noAutoPayTo": false,
+            "isHorizontalAllowed": false,
             "displayedTitle": "",
             "noQuickActions": false,
             "enterTapped": false,
