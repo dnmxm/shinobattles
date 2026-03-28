@@ -55,7 +55,8 @@
         }
       ],
       "countersStartingValues": [
-        "1"
+        5,
+        0
       ],
       "hideFacedDownCards": false,
       "sections": {
@@ -129,7 +130,7 @@
             "title": "Mission_D",
             "isHidden": "yes",
             "height": "SMALL",
-            "alignment": "CENTER",
+            "alignment": "DECK",
             "opponentAlignment": false,
             "noAutoPayTo": false,
             "isHorizontalAllowed": true,
@@ -145,7 +146,7 @@
             "title": "Mission_C",
             "isHidden": "yes",
             "height": "SMALL",
-            "alignment": "CENTER",
+            "alignment": "DECK",
             "opponentAlignment": false,
             "noAutoPayTo": false,
             "isHorizontalAllowed": true,
@@ -161,7 +162,7 @@
             "title": "Mission_B",
             "isHidden": "yes",
             "height": "SMALL",
-            "alignment": "CENTER",
+            "alignment": "DECK",
             "opponentAlignment": false,
             "noAutoPayTo": false,
             "isHorizontalAllowed": true,
@@ -177,7 +178,7 @@
             "title": "Mission_A",
             "isHidden": "yes",
             "height": "SMALL",
-            "alignment": "CENTER",
+            "alignment": "DECK",
             "opponentAlignment": false,
             "noAutoPayTo": false,
             "isHorizontalAllowed": false,
